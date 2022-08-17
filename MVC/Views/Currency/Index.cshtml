@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Currency Page";
+
+}
+@model Currency
+
+<div class="container">
+    <h2>DÖVİZ</h2>
+    <hr />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Döviz Türü</th>
+                <th scope="col">Miktar</th>
+                <th scope="col">Tarih</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>@Model.CurrencyUnit</td>
+            <td>@Model.Quantity $</td>
+            <td>@Model.Date </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    setTimeout(function() {
+        window.location.reload(1);
+    }, 15000);
+</script>
